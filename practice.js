@@ -49,7 +49,10 @@ first(names, function(firstName){
   Then invoke the callback, passing in the last element in the array as the argument.
 */
 
-//Code Here
+function last(arr, callback){
+  var lastItem = arr.pop()
+  return callback(lastItem)
+}
 
 // Do not edit the code below.
 last(names, function(lastName){

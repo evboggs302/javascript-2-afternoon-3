@@ -91,7 +91,15 @@ multiply(4, 3, function(answer){
   If the name does not exist, invoke the callback with false as the argument.
 */
 
-//Code Here 
+function contains(arr, nam, callback){
+  for(let i=0; i<arr.length; i++){
+    if(arr[i] = nam){
+      return callback(true)
+    }else{
+      return callback(false)
+    }
+  }
+}
 
 // Do not edit the code below.
 contains(names, 'Colt', function(result){

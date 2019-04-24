@@ -93,12 +93,11 @@ multiply(4, 3, function(answer){
 
 function contains(arr, nam, callback){
   for(let i=0; i<arr.length; i++){
-    if(arr[i] = nam){
-      return callback(true)
-    }else{
-      return callback(false)
-    }
-  }
+    if(arr[i] === nam){
+      return callback(true);
+    } 
+  } 
+  return callback(false);
 }
 
 // Do not edit the code below.
@@ -120,7 +119,14 @@ contains(names, 'Colt', function(result){
   Remove any duplicate values from the array, and invoke the callback with the modified array as an argument.
 */
 
-//Code Here
+function uniq(arr, callback){
+  var newArr =[];
+  for(let i=0; i<arr.length; i++){
+      if(newArr.indexOf(arr[i]) === -1){
+        newArr.push(arr[i]);
+      }
+  }return callback(newArr)
+}
 
 // Do not edit the code below.
 uniq(names, function(uniqArr){
